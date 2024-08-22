@@ -5,14 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>CashWrap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
   </head>
   <body class="body bg-darkBlue">
-    <div class="flex text-white items-center p-4 bg-lightPurple space-x-4">
-      <input type="text" placeholder="Search" class="p-2 rounded-xl mx-auto" />
+    <div
+      class="flex justify-between text-white items-center p-4 bg-lightPurple space-x-4"
+    >
+      <span class="cursor-pointer filter">
+        <i class="bi bi-filter-left px-2 p-1 rounded-md bg-black text-2xl"></i>
+      </span>
+      <input
+        type="text"
+        placeholder="Search"
+        class="p-2 rounded-xl mx-auto w-[250px] text-black"
+      />
       <div class="flex space-x-3">
         <img src="" alt="invalid" />
         <h3>Ngesa Ian</h3>
       </div>
     </div>
+
+    <div
+      class="sidebar fixed top-0 bottom-0 left-[-300px] p-2 w-[300px] bg-black text-white"
+    >
+      <div class="head flex p-2.5 mt-2 items-center">
+        <i class="bi bi-cash-coin px-2 py-1 bg-purple rounded-md"> </i>
+        <h1 class="text-sm ml-3">CashWrap</h1>
+        <i class="bi bi-x ml-24 text-xl cancel"></i>
+      </div>
+
+      <hr class="my-2 text-secondary" />
+      <div
+        class="flex p-2.5 mt-2 ml-3 items-center cursor-pointer hover:bg-purple rounded-xl"
+      >
+        <i class="bi bi-bar-chart-fill p-2"></i>
+        <h1 class="text-sm">Chart</h1>
+      </div>
+      <div
+        class="flex p-2.5 items-center ml-3 mt-1 cursor-pointer hover:bg-purple rounded-xl"
+      >
+        <i class="bi bi-moon p-2"></i>
+        <h1 class="text-sm">Color</h1>
+      </div>
+      <div
+        class="flex items-center ml-3 p-2.5 cursor-pointer hover:bg-purple rounded-xl"
+      >
+        <i class="bi bi-question-circle-fill p-2"></i>
+        <h1 class="text-sm">About</h1>
+      </div>
+      <div
+        class="flex items-center ml-3 p-2.5 cursor-pointer hover:bg-purple rounded-xl"
+      >
+        <i class="bi bi-gear p-2"></i>
+        <h1 class="text-sm">Settings</h1>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
