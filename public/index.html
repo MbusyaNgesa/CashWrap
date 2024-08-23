@@ -10,9 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
   </head>
-  <body class="body bg-darkBlue">
+  <body class="body bg-cream">
     <div
-      class="flex justify-between text-white items-center p-4 bg-lightPurple space-x-4"
+      class="flex justify-between text-white items-center p-4 bg-black space-x-4"
     >
       <span class="cursor-pointer filter">
         <i class="bi bi-filter-left px-2 p-1 rounded-md bg-black text-2xl"></i>
@@ -29,9 +29,9 @@
     </div>
 
     <div
-      class="sidebar fixed top-0 bottom-0 left-[-300px] p-2 w-[300px] bg-black text-white"
+      class="sidebar fixed top-0 bottom-0 left-[-300px] p-2 w-[300px] bg-black text-white rounded-xl"
     >
-      <div class="head flex p-2.5 mt-2 items-center">
+      <div class="head flex p-2.5 mt-2 items-center bg-lightPurple rounded-xl">
         <i class="bi bi-cash-coin px-2 py-1 bg-purple rounded-md"> </i>
         <h1 class="text-sm ml-3">CashWrap</h1>
         <i class="bi bi-x ml-24 text-xl cancel"></i>
@@ -63,6 +63,38 @@
         <h1 class="text-sm">Settings</h1>
       </div>
     </div>
+    <section>
+      <div class="flex mt-5 justify-center">
+        <div
+          class="p-[40px] pl-[60px] pr-[60px] text-center m-6 bg-black rounded-xl shadow hover:bg-purple"
+        >
+          <h1 class="text-white text-lg">Income</h1>
+          <h1 class="text-white mt-2 text-2xl">90,000</h1>
+          <div class="bg-secondary rounded-xl text-center mt-3 hover:bg-black">
+            <h1 class="text-black text-2xl">+</h1>
+          </div>
+        </div>
+        <div
+          class="p-[40px] pl-[60px] pr-[60px] text-center m-6 bg-black rounded-xl shadow hover:bg-purple"
+        >
+          <h1 class="text-white text-lg">Expense</h1>
+          <h1 class="text-white mt-2 text-2xl">30,000</h1>
+          <div class="bg-secondary rounded-xl text-center mt-3 hover:bg-black">
+            <h1 class="text-black text-2xl">+</h1>
+          </div>
+        </div>
+        <div
+          class="p-[40px] pl-[60px] pr-[60px] text-center m-6 bg-black rounded-xl shadow hover:bg-purple"
+        >
+          <h1 class="text-white text-lg">Balance</h1>
+          <h1 class="text-white mt-2 text-2xl">60,000</h1>
+          <div class="bg-secondary rounded-xl text-center mt-3 hover:bg-black">
+            <h1 class="text-black text-2xl">+</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
