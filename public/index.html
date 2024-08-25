@@ -96,8 +96,8 @@
     </div>
 
     <!--Body Section-->
-    <section class="flex justify-center">
-      <div class="p-6 w-1/2 bg-black mt-5 rounded-xl">
+    <section class="flex justify-center m-5 mt-12">
+      <div class="p-6 w-1/2 bg-black rounded-xl">
         <div
           class="text-darkBlue p-[15px] bg-secondary rounded-3xl text-center"
         >
@@ -125,7 +125,8 @@
         >
           <i
             class="bi bi-bus-front bg-lightPurple rounded-full p-2 text-whit"
-          ></i>
+          ></i
+          >pp
           <h1 class="font-serif ml-2">Rent</h1>
           <div class="w-3/4 bg-darkBlue rounded-full">
             <div
@@ -158,6 +159,15 @@
       </div>
     </section>
 
+    <!--Chart using Chart.js-->
+    <section class="flex justify-center">
+      <div class="w-1/2 bg-black mt-8 rounded-xl">
+        <canvas id="myChart" class="text-2xl"></canvas>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
+    <script src="mychart.js"></script>
   </body>
 </html>
