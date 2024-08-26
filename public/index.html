@@ -95,13 +95,29 @@
       </div>
     </div>
 
+    <section></section>
+
     <!--Body Section-->
     <section class="flex justify-center m-5 mt-12">
-      <div class="p-6 w-1/2 bg-black rounded-xl">
+      <div class="p-6 min-w-5 w-[660px] bg-black rounded-xl">
         <div
-          class="text-darkBlue p-[15px] bg-secondary rounded-3xl text-center"
+          class="budget text-darkBlue p-[15px] bg-secondary rounded-3xl text-center"
         >
           <h1><span class="text-2xl">+</span> New Allocation</h1>
+        </div>
+        <div class="modal flex justify-center">
+          <form action="">
+            <input
+              type="text"
+              class="mt-2 p-2 rounded-xl"
+              placeholder="Actvity"
+            />
+            <input
+              type="text"
+              class="mt-2 flex justify-center p-2 rounded-xl"
+              placeholder="Amount"
+            />
+          </form>
         </div>
         <div
           class="flex justify-between text-darkBlue p-[20px] mt-4 bg-secondary rounded-3xl"
@@ -125,8 +141,7 @@
         >
           <i
             class="bi bi-bus-front bg-lightPurple rounded-full p-2 text-whit"
-          ></i
-          >pp
+          ></i>
           <h1 class="font-serif ml-2">Rent</h1>
           <div class="w-3/4 bg-darkBlue rounded-full">
             <div
@@ -161,13 +176,13 @@
 
     <!--Chart using Chart.js-->
     <section class="flex justify-center">
-      <div class="w-1/2 bg-black mt-8 rounded-xl">
+      <div class="min-h-14 min-w-16 p-6 bg-black mt-8 rounded-xl">
         <canvas id="myChart" class="text-2xl"></canvas>
       </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
     <script src="mychart.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

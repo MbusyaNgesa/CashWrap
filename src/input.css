@@ -5,3 +5,6 @@
 .sidebar {
   overflow-y: hidden; /* Default state - hides scrollbar */
 }
+.modal {
+  display: none;
+}
