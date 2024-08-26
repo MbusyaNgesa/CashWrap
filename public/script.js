@@ -21,3 +21,9 @@ function sidebar(e) {
 function removeSidebar(e) {
   document.querySelector(".sidebar").classList.toggle("left-[-300px]");
 }
+
+window.onclick = function (e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+};
