@@ -1,7 +1,7 @@
 const ctx = document.getElementById("myChart");
 
 new Chart(ctx, {
-  type: "bar",
+  type: "doughnut",
   data: {
     labels: ["  Rent", "Travels", "Food"],
     datasets: [
