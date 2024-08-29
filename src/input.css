@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.body {
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 .sidebar {
   overflow-y: hidden; /* Default state - hides scrollbar */
 }
