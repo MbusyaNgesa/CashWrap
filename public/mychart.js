@@ -1,13 +1,13 @@
 const ctx = document.getElementById("myChart");
 
 new Chart(ctx, {
-  type: "doughnut",
+  type: "bar",
   data: {
     labels: ["  Rent", "Travels", "Food"],
     datasets: [
       {
         label: "My First Dataset",
-        data: [2500, 5500, 200],
+        data: [2500, 5500, 1000],
         backgroundColor: [
           "rgb(255, 99, 132)",
           "rgb(54, 162, 235)",

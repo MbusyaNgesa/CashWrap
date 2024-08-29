@@ -41,9 +41,9 @@
         >
           <div class="flex justify-center">
             <img
-              src="img/Travels.jpg"
+              src="img/Quality Badge.png"
               alt="invalid"
-              class="rounded-full h-20"
+              class="rounded-full h-20 w-20"
             />
           </div>
           <h1 class="pt-2">Over Achiever</h1>
@@ -56,11 +56,56 @@
       <div
         class="grid grid-cols-7 gap-3 p-4 text-center md:ml-14 xl:ml-0 md:mr-14 xl:mr-0"
       >
-        <div class="p-4 col-span-3 bg-secondary rounded-xl h-72 row-span-2">
-          03
+        <div
+          class="relative p-4 col-span-3 bg-secondary rounded-xl h-72 row-span-2"
+        >
+          <div class="flex space-x-11">
+            <h1>Budget</h1>
+            <h1>Goals</h1>
+          </div>
+          <div class="flex space-x-3 mt-3 bg-cream rounded-2xl p-2 text-center">
+            <img
+              src="img/Travels.jpg"
+              alt="invalid"
+              class="rounded-full h-7 w-7"
+            />
+            <h1>Travels</h1>
+          </div>
+          <div class="flex space-x-3 mt-3 bg-cream rounded-2xl p-2">
+            <img
+              src="img/Travels.jpg"
+              alt="invalid"
+              class="rounded-full h-7 w-7"
+            />
+            <h1>Food</h1>
+          </div>
+          <div class="flex space-x-3 mt-3 bg-cream rounded-2xl p-2">
+            <img
+              src="img/Travels.jpg"
+              alt="invalid"
+              class="rounded-full h-7 w-7"
+            />
+            <h1>Drinks</h1>
+          </div>
+          <h1
+            class="flex absolute bottom-4 right-4 items-center justify-center w-12 h-12 text-6xl text-lightPurple"
+          >
+            +
+          </h1>
         </div>
-        <div class="p-6 col-span-4 bg-secondary rounded-xl h-32">04</div>
-        <div class="p-4 col-span-4 bg-secondary rounded-xl h-32">03</div>
+        <!--Doughnut Chart-->
+        <div
+          class="p-6 max-h-64 col-span-4 bg-secondary rounded-xl items-center justify-center"
+        >
+          <canvas id="myChart" class=""></canvas>
+        </div>
+        <div class="p-4 col-span-4 bg-secondary rounded-xl h-32">
+          <div class="flex space-x-8">
+            <h1>Daily</h1>
+            <h1>Weekly</h1>
+            <h1>Monthly</h1>
+          </div>
+        </div>
       </div>
     </section>
 
