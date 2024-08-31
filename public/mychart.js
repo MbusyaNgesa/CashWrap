@@ -75,4 +75,3 @@ const myStackedBarChart = new Chart(ctx, {
   data: data,
   options: options,
 });
-s;
