@@ -21,7 +21,12 @@
       <div
         class="Header p-[20px] bg-lightBlue flex justify-between rounded-b-xl"
       >
-        <h1 class="text-2xl side">CashWrap</h1>
+        <span class="cursor-pointer filter">
+          <i
+            class="bi bi-filter-left px-2 p-1 rounded-md bg-lightBlue text-2xl"
+          ></i>
+        </span>
+        <h1 class="text-2xl">CashWrap</h1>
         <div class="justify-center space-x-3">
           <i class="bi bi-moon-fill text-xl moon"></i>
           <i class="bi bi-bell-fill text-xl notifications"></i>
@@ -29,9 +34,10 @@
       </div>
     </section>
 
+    <!--Sidebar Section-->
     <section>
       <div
-        class="sidebar fixed top-0 bottom-0 left-[-300px] p-2 w-[300px] bg-black text-white rounded-xl"
+        class="sidebar fixed top-0 bottom-0 left-[-300px] p-2 w-[300px] bg-black text-white rounded-xl z-50"
       >
         <div
           class="head flex p-2.5 mt-2 items-center bg-lightPurple rounded-xl"
@@ -105,7 +111,7 @@
         class="grid grid-cols-7 gap-3 p-4 text-center md:ml-14 xl:ml-0 md:mr-14 xl:mr-0"
       >
         <div
-          class="relative p-4 col-span-3 bg-secondary rounded-xl h-72 row-span-2"
+          class="relative z-10 p-4 col-span-3 bg-secondary rounded-xl h-72 row-span-2"
         >
           <div class="flex space-x-11">
             <h1>Budget</h1>
