@@ -1,4 +1,4 @@
-const filter = document.querySelector(".filter");
+const side = document.querySelector(".side");
 const cancel = document.querySelector(".cancel");
 const budget = document.querySelector(".budget");
 const modal = document.querySelector(".modal");
@@ -8,7 +8,7 @@ function showModal() {
 }
 
 budget.addEventListener("click", showModal);
-filter.addEventListener("click", sidebar);
+side.addEventListener("click", sidebar);
 cancel.addEventListener("click", removeSidebar);
 
 function hideModal() {

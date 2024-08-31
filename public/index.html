@@ -16,9 +16,57 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
   </head>
-  <body class="body bg-cream font-poppins">
+  <body class="body bg-ash font-poppins">
     <section>
-      <div class="Header p-[25px] bg-lightBlue"></div>
+      <div
+        class="Header p-[20px] bg-lightBlue flex justify-between rounded-b-xl"
+      >
+        <h1 class="text-2xl side">CashWrap</h1>
+        <div class="justify-center space-x-3">
+          <i class="bi bi-moon-fill text-xl moon"></i>
+          <i class="bi bi-bell-fill text-xl notifications"></i>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="sidebar fixed top-0 bottom-0 left-[-300px] p-2 w-[300px] bg-black text-white rounded-xl"
+      >
+        <div
+          class="head flex p-2.5 mt-2 items-center bg-lightPurple rounded-xl"
+        >
+          <i class="bi bi-cash-coin px-2 py-1 bg-purple rounded-md"> </i>
+          <h1 class="text-sm ml-3">CashWrap</h1>
+          <i class="bi bi-x ml-24 text-xl cancel"></i>
+        </div>
+
+        <hr class="my-2 text-secondary" />
+        <div
+          class="flex p-2.5 mt-2 ml-3 items-center cursor-pointer hover:bg-purple rounded-xl"
+        >
+          <i class="bi bi-bar-chart-fill p-2"></i>
+          <h1 class="text-sm">Chart</h1>
+        </div>
+        <div
+          class="flex p-2.5 items-center ml-3 mt-1 cursor-pointer hover:bg-purple rounded-xl"
+        >
+          <i class="bi bi-moon p-2"></i>
+          <h1 class="text-sm">Color</h1>
+        </div>
+        <div
+          class="flex items-center ml-3 p-2.5 cursor-pointer hover:bg-purple rounded-xl"
+        >
+          <i class="bi bi-question-circle-fill p-2"></i>
+          <h1 class="text-sm">About</h1>
+        </div>
+        <div
+          class="flex items-center ml-3 p-2.5 cursor-pointer hover:bg-purple rounded-xl"
+        >
+          <i class="bi bi-gear p-2"></i>
+          <h1 class="text-sm">Settings</h1>
+        </div>
+      </div>
     </section>
     <section class="mt-5">
       <div
@@ -63,7 +111,7 @@
             <h1>Budget</h1>
             <h1>Goals</h1>
           </div>
-          <div class="flex space-x-3 mt-3 bg-cream rounded-2xl p-2 text-center">
+          <div class="flex space-x-3 mt-6 bg-purp rounded-2xl p-2 text-center">
             <img
               src="img/Travels.jpg"
               alt="invalid"
@@ -95,15 +143,18 @@
         </div>
         <!--Doughnut Chart-->
         <div
-          class="p-6 max-h-64 col-span-4 bg-secondary rounded-xl items-center justify-center"
+          class="p-6 max-h-64 col-span-4 bg-secondary rounded-xl flex items-center justify-center text-center"
         >
           <canvas id="myChart" class=""></canvas>
         </div>
-        <div class="p-4 col-span-4 bg-secondary rounded-xl h-32">
+        <div class="p-4 col-span-4 bg-secondary rounded-xl max-h-64">
           <div class="flex space-x-8">
             <h1>Daily</h1>
             <h1>Weekly</h1>
             <h1>Monthly</h1>
+          </div>
+          <div class="flex justify-center items-center h-44">
+            <canvas id="myStackedBarChart" class=""></canvas>
           </div>
         </div>
       </div>
