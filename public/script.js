@@ -21,7 +21,9 @@ function removeSidebar(e) {
 //Open Modal
 budget.addEventListener("click", () => {
   const card = document.getElementById("crud-modal");
-  card.style.display = "block";
+  card.style.display = "flex";
+  const body = document.querySelector(".body");
+  body.style.opacity = "0.5";
 });
 
 //Close Modal
@@ -30,15 +32,12 @@ closeModal.addEventListener("click", () => {
   closeCard.style.display = "none";
 });
 
-//Modal Value
+//Values in Modal
 addBudget.addEventListener("click", function budget(e) {
   e.preventDefault();
   let newName = document.getElementById("name").value;
   let newPrice = document.getElementById("price").value;
   let inputFile = document.getElementById("input-file");
-  // console.log(newName);
-  // console.log(newPrice);
-  // console.log(inputFile);
 
   let element = document.createElement("div");
   element.className = "flex space-x-3 mt-3 bg-purp rounded-2xl p-2 text-center";
@@ -48,11 +47,10 @@ addBudget.addEventListener("click", function budget(e) {
   image.alt = "invalid";
   image.className = "rounded-full h-7 w-7";
   element.appendChild(image);
-  // console.log(element);
 
   let nameText = document.createElement("span");
   nameText.appendChild(document.createTextNode(newName));
   element.appendChild(nameText);
-  // console.log(element);
+
   budgetCard.appendChild(element);
 });

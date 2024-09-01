@@ -111,7 +111,7 @@
         class="grid grid-cols-7 gap-3 p-4 text-center md:ml-14 xl:ml-0 md:mr-14 xl:mr-0"
       >
         <div
-          class="budgetCard relative z-10 p-4 col-span-3 bg-secondary rounded-xl h-72 row-span-2"
+          class="budgetCard overflow-hidden relative z-10 p-4 col-span-3 bg-secondary rounded-xl min-h-40 row-span-2"
         >
           <div class="flex space-x-11">
             <h1>Budget</h1>
@@ -168,6 +168,10 @@
 
     <!--Modal Body-->
     <section>
+      <div
+        id="modal-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden"
+      ></div>
       <!-- Main modal -->
       <div
         id="crud-modal"
@@ -205,7 +209,7 @@
                     required=""
                   />
                 </div>
-                <div class="col-span-2 sm:col-span-1">
+                <div class="col-span-2">
                   <label
                     for="price"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -221,7 +225,9 @@
                   />
                 </div>
                 <div class="">
-                  <label class="mb-2" for="input-file">Image</label>
+                  <label class="mb-2 col-span-2 sm:col-span-1" for="input-file"
+                    >Image</label
+                  >
                   <input
                     type="file"
                     accept="image/jpeg image/jpg image/png"
