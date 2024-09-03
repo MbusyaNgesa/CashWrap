@@ -5,6 +5,7 @@ const modal = document.querySelector(".modal");
 const closeModal = document.getElementById("closeModal");
 const addBudget = document.querySelector(".addBudget");
 const budgetCard = document.querySelector(".budgetCard");
+const newModal = document.querySelector(".card");
 // console.log(budgetCard);
 
 filter.addEventListener("click", sidebar);
@@ -17,6 +18,13 @@ function sidebar(e) {
 function removeSidebar(e) {
   document.querySelector(".sidebar").classList.toggle("left-[-300px]");
 }
+
+//New Modal
+newModal.addEventListener("click", () => {
+  const newCard = document.querySelector(".pro-modal");
+  newCard.style.display = "flex";
+  console.log(newCard);
+});
 
 //Open Modal
 budget.addEventListener("click", () => {
