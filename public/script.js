@@ -30,6 +30,9 @@ budget.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   const closeCard = document.getElementById("crud-modal");
   closeCard.style.display = "none";
+
+  const body = document.querySelector(".body");
+  body.style.opacity = "1.0";
 });
 
 //Values in Modal
