@@ -55,5 +55,19 @@ addBudget.addEventListener("click", function budget(e) {
   nameText.appendChild(document.createTextNode(newName));
   element.appendChild(nameText);
 
+  let bar1 = document.createElement("div");
+  bar1.className = "w-3/4 mt-3 bg-secondary rounded-full h-1.5 mb-4";
+  element.appendChild(bar1);
+
+  let bar2 = document.createElement("div");
+  bar2.className = "bar2 bg-skyblue h-1.5 rounded-full";
+  bar2.style = "width: 45%";
+  bar1.appendChild(bar2);
+
+  let Num = document.createElement("span");
+  Num.className = "max-w-[100px] overflow-hidden";
+  Num.appendChild(document.createTextNode(newPrice));
+  element.appendChild(Num);
+
   budgetCard.appendChild(element);
 });
