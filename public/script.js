@@ -5,7 +5,9 @@ const modal = document.querySelector(".modal");
 const closeModal = document.getElementById("closeModal");
 const addBudget = document.querySelector(".addBudget");
 const budgetCard = document.querySelector(".budgetCard");
-const newModal = document.querySelector(".card");
+// const newModal = document.querySelector(".card");
+const allocation = document.querySelector(".allocation");
+const removeModal = document.getElementById("removeModal");
 // console.log(budgetCard);
 
 filter.addEventListener("click", sidebar);
@@ -20,10 +22,18 @@ function removeSidebar(e) {
 }
 
 //New Modal
-newModal.addEventListener("click", () => {
-  const newCard = document.querySelector(".pro-modal");
-  newCard.style.display = "flex";
-  console.log(newCard);
+allocation.addEventListener("click", () => {
+  const allocationCard = document.getElementById("pro-modal");
+  allocationCard.style.display = "flex";
+  console.log("Okay");
+});
+
+removeModal.addEventListener("click", () => {
+  const closeCard = document.getElementById("pro-modal");
+  closeCard.style.display = "none";
+
+  const body = document.querySelector(".body");
+  body.style.opacity = "1.0";
 });
 
 //Open Modal
