@@ -15,24 +15,6 @@
 #pro-modal {
   display: none;
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-} */
-
-/* .modal {
+#card-info {
   display: none;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-} */
-
-/* .hero {
-  gap: 10px;
-} */
-/* .graph {
-  height: 40px;
-} */
+}

@@ -8,6 +8,7 @@ const budgetCard = document.querySelector(".budgetCard");
 // const newModal = document.querySelector(".card");
 const allocation = document.querySelector(".allocation");
 const removeModal = document.getElementById("removeModal");
+const balance = document.querySelector(".balance");
 // console.log(budgetCard);
 
 filter.addEventListener("click", sidebar);
@@ -21,11 +22,13 @@ function removeSidebar(e) {
   document.querySelector(".sidebar").classList.toggle("left-[-300px]");
 }
 
-//New Modal
+//Allocation Modal
 allocation.addEventListener("click", () => {
   const allocationCard = document.getElementById("pro-modal");
   allocationCard.style.display = "flex";
-  console.log("Okay");
+
+  const body = document.querySelector(".body");
+  body.style.opacity = "0.5";
 });
 
 removeModal.addEventListener("click", () => {
@@ -88,4 +91,10 @@ addBudget.addEventListener("click", function budget(e) {
   element.appendChild(Num);
 
   budgetCard.appendChild(element);
+});
+
+balance.addEventListener("click", () => {
+  const card = document.getElementById("card-info");
+  card.style.display = "flex";
+  console.log(card);
 });

@@ -79,7 +79,9 @@
         <div
           class="hero p-4 text-center grid grid-cols-3 gap-3 md:ml-14 xl:ml-0 md:mr-14 xl:mr-0"
         >
-          <div class="rounded-xl p-4 bg-secondary col-span-2 h-44">
+          <div
+            class="card rounded-xl bg-secondary p-4 col-span-2 h-44 bg-gradient-to-r from-pink to-purp"
+          >
             <div class="flex text-black justify-between">
               <h1>Balance</h1>
               <h1>Date</h1>
@@ -261,7 +263,7 @@
       </div>
     </section>
 
-    <!--Individual Modal-->
+    <!--Allocation Modal-->
     <section>
       <div
         id="modal-overlay"
@@ -329,15 +331,48 @@
                   />
                 </div>
               </div>
-              <button
-                type="submit"
-                class="addBudget text-white inline-flex items-center focus:ring-4 focus:outline-none focus:ring-skyblue font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Add Budget
-              </button>
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="addBudget w-3/4 bg-lightBlue text-white inline-flex items-center focus:ring-4 focus:outline-none focus:ring-skyblue font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Edit
+                </button>
+              </div>
             </form>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!--Balance Modal-->
+    <section>
+      <div
+        id="card-info"
+        class="min-h-screen p-24 bg-secondary flex flex-col items-center justify-between"
+      >
+        <form class="w-full max-w-3xl mx-auto px-6 py-8 shadow-md rounded-md">
+          <label>Card number:</label>
+          <input
+            type="text"
+            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          />
+          <label>Exp. date:</label>
+          <input
+            type="text"
+            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          />
+          <label>CCV:</label>
+          <input
+            type="text"
+            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          />
+          <label>Card holder:</label>
+          <input
+            type="text"
+            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          />
+        </form>
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
