@@ -265,10 +265,6 @@
 
     <!--Allocation Modal-->
     <section>
-      <div
-        id="modal-overlay"
-        class="fixed inset-0 bg-black bg-opacity-50 hidden"
-      ></div>
       <!-- Main modal -->
       <div
         id="pro-modal"
@@ -348,31 +344,46 @@
     <!--Balance Modal-->
     <section>
       <div
-        id="card-info"
-        class="min-h-screen p-24 bg-secondary flex flex-col items-center justify-between"
+        id=""
+        tabindex="-1"
+        class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <form class="w-full max-w-3xl mx-auto px-6 py-8 shadow-md rounded-md">
-          <label>Card number:</label>
-          <input
-            type="text"
-            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          />
-          <label>Exp. date:</label>
-          <input
-            type="text"
-            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          />
-          <label>CCV:</label>
-          <input
-            type="text"
-            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          />
-          <label>Card holder:</label>
-          <input
-            type="text"
-            class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purp focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          />
-        </form>
+        <div class="relative p-4 w-full max-w-md max-h-full">
+          <div class="bg-purp p-14 relative">
+            <form class="p-4 md:p-5">
+              <div class="">
+                <label class="block">Card Number</label>
+                <input
+                  type="text"
+                  class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                />
+              </div>
+              <div class="flex gap-4 mb-4">
+                <div class="flex-2">
+                  <label class="block">Balance</label>
+                  <input
+                    type="text"
+                    class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  />
+                </div>
+                <div class="flex-1">
+                  <label class="block">Income</label>
+                  <input
+                    type="text"
+                    class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  />
+                </div>
+              </div>
+              <div class="">
+                <label class="block">Expense</label>
+                <input
+                  type="text"
+                  class="flex h-10 w-full rounded-md border-2 px-4 py-1.5 text-lg ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
