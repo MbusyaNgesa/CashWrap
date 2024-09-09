@@ -8,7 +8,7 @@ const budgetCard = document.querySelector(".budgetCard");
 // const newModal = document.querySelector(".card");
 const allocation = document.querySelector(".allocation");
 const removeModal = document.getElementById("removeModal");
-const balance = document.querySelector(".balance");
+const balance = document.getElementById("balance");
 // console.log(budgetCard);
 
 filter.addEventListener("click", sidebar);
@@ -96,5 +96,18 @@ addBudget.addEventListener("click", function budget(e) {
 balance.addEventListener("click", () => {
   const card = document.getElementById("card-info");
   card.style.display = "flex";
-  console.log(card);
+  // console.log(card);
+});
+
+const incomeNum = document.getElementById("incomeNum");
+incomeNum.addEventListener("input", (e) => {
+  const input = e.target.value.replace(/\D/g, ""); //Removes non-numeric characters from the input
+  incomeNum.value = input;
+  // console.log(input);
+});
+
+const income = document.getElementById("incomeVal");
+incomeNum.addEventListener("input", (e) => {
+  income.innerHTML = e.target.value;
+  console.log(income);
 });
