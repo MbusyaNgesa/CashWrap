@@ -102,12 +102,21 @@ balance.addEventListener("click", () => {
 const incomeNum = document.getElementById("incomeNum");
 incomeNum.addEventListener("input", (e) => {
   const input = e.target.value.replace(/\D/g, ""); //Removes non-numeric characters from the input
-  incomeNum.value = input;
+
+  let newInput = "";
+  for (let i = 0; i < input.length; i++) {
+    if (i % 3 === 0 && i > 0) {
+      newInput += ",";
+    }
+    newInput += input[i];
+  }
+  incomeNum.value = newInput;
+  // incomeNum.value = input;
   // console.log(input);
 });
 
 const income = document.getElementById("incomeVal");
 incomeNum.addEventListener("input", (e) => {
-  income.innerHTML = e.target.value;
+  income.innerText = e.target.value;
   console.log(income);
 });
