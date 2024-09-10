@@ -93,10 +93,12 @@ addBudget.addEventListener("click", function budget(e) {
   budgetCard.appendChild(element);
 });
 
-balance.addEventListener("click", () => {
+balance.addEventListener("click", (e) => {
   const card = document.getElementById("card-info");
   card.style.display = "flex";
   // console.log(card);
+  const body = document.querySelector(".body");
+  body.style.opacity = "0.5";
 });
 
 const incomeNum = document.getElementById("incomeNum");
@@ -119,4 +121,13 @@ const income = document.getElementById("incomeVal");
 incomeNum.addEventListener("input", (e) => {
   income.innerText = e.target.value;
   console.log(income);
+});
+
+const removeMod = document.getElementById("removeMod");
+removeMod.addEventListener("click", () => {
+  const closeCard = document.getElementById("card-info");
+  closeCard.style.display = "none";
+
+  const body = document.querySelector(".body");
+  body.style.opacity = "1.0";
 });
