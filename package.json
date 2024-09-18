@@ -2,10 +2,12 @@
   "name": "cashwrap",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./backend/server.js",
+  "type": "module",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./public/style.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+    "watch": "tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "start": "nodemon backend/server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,7 @@
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
     "mailtrap": "^3.4.0",
-    "mongoose": "^8.6.2"
+    "mongoose": "^8.6.2",
+    "nodemon": "^3.1.5"
   }
 }
