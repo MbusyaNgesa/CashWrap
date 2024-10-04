@@ -26,10 +26,10 @@ export const sendVerificationEmail = async (email, verificationToken) => {
 export const sendWelcomeEmail = async (email, name) => {
   const recipient = [{ email }];
   try {
-    const response = await mailtrapClient({
+    const response = await mailtrapClient.send({
       from: sender,
       to: recipient,
-      template_uuid: "23e67522-a067-45fc-9772-bd1c3889af7b",
+      template_uuid: "925609eb-9614-4b2f-bde1-ee32f4e55a36",
       template_variables: {
         company_info_name: "Cashwrap",
         name: name,
