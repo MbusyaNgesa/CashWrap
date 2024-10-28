@@ -116,7 +116,7 @@ export const login = async (req, res) => {
     generateTokenAndSetCookie(res, user._id);
     user.lastLogin = new Date();
     await user.save();
-    res.status(400).json({
+    res.status(200).json({
       success: true,
       message: "Logged in successfully",
       user: { ...user._doc, password: undefined },
@@ -145,8 +145,8 @@ export const forgotPassword = async (req, res) => {
     const resetToken = crypto.randomBytes(20).toString("hex");
     const resetTokenExpiresAt = Date.now() + 1 * 60 * 60 * 1000;
 
-    const resetPasswordToken = resetToken;
-    const resetPasswordExpiresAt = resetTokenExpiresAt;
+    user.resetPasswordToken = resetToken;
+    user.resetPasswordExpiresAt = resetTokenExpiresAt;
 
     await user.save();
 
@@ -177,7 +177,7 @@ export const resetPassword = async (req, res) => {
     if (!user) {
       return res
         .status(400)
-        .json({ success: false, message: "Invalid/Expired token" });
+        .json({ success: false, message: "Invalid or Expired token 1" });
     }
 
     //update password
@@ -194,5 +194,18 @@ export const resetPassword = async (req, res) => {
   } catch (error) {
     console.log("Error in resetPassword", error);
     res.status(400).json({ success: false, message: error.message });
+  }
+};
+
+export const checkAuth = async (req, res) => {
+  try {
+    const user = await User.findById(req.userId).select("-password");
+    if (!user)
+      return res.status(400).json({ success: true, message: "User not found" });
+
+    res.status(200).json({ success: true, user });
+  } catch (error) {
+    console.log("Error in checkAuth", error);
+    res.status(400).json({ success: false, messsage: error.message });
   }
 };
