@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
+import { Input } from "../components/index";
+import { Lock, Mail, User } from "lucide-react";
+import { useState } from "react";
 
 const SignupPage = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleSignup = (e) => {
     e.preventDefault();
   };
@@ -23,7 +30,30 @@ const SignupPage = () => {
         >
           Create Account
         </h2>
-        <form onSubmit={handleSignup}></form>
+
+        <form onSubmit={handleSignup}>
+          <Input
+            icon={User}
+            type="text"
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <Input
+            icon={Mail}
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            icon={Lock}
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </form>
       </div>
     </motion.div>
   );
