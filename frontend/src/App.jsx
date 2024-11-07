@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div
       className="min-h-screen bg-gradient-to-br 
-    from-black via-fuchsia-800 to-black flex 
+    from-gray-800 via-fuchsia-800 to-gray-900 flex 
     items-center justify-center relative overflow-hidden "
     >
       <FloatingShape
